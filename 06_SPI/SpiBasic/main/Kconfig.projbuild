@@ -1,0 +1,44 @@
+menu "SPI Basic Loopback Configuration"
+
+    config SPI_MOSI_GPIO
+        int "MOSI GPIO Pin"
+        default 11
+        help
+            GPIO pin for SPI Master Out Slave In (MOSI).
+
+    config SPI_MISO_GPIO
+        int "MISO GPIO Pin"
+        default 13
+        help
+            GPIO pin for SPI Master In Slave Out (MISO).
+
+    config SPI_SCLK_GPIO
+        int "SCLK GPIO Pin"
+        default 12
+        help
+            GPIO pin for SPI Serial Clock (SCLK).
+
+    config SPI_CS_GPIO
+        int "CS GPIO Pin"
+        default 10
+        help
+            GPIO pin for SPI Chip Select (CS).
+
+    config SPI_CLOCK_SPEED_HZ
+        int "SPI Clock Speed (Hz)"
+        default 10000000
+        help
+            Clock speed in Hz (e.g. 10000000 = 10 MHz).
+
+    config SPI_MODE_SELECT
+        int "SPI Mode (0, 1, 2, 3)"
+        range 0 3
+        default 0
+        help
+            SPI Mode:
+            0: CPOL=0, CPHA=0 (Sample on rising edge)
+            1: CPOL=0, CPHA=1 (Sample on falling edge)
+            2: CPOL=1, CPHA=0 (Sample on falling edge)
+            3: CPOL=1, CPHA=1 (Sample on rising edge)
+
+endmenu

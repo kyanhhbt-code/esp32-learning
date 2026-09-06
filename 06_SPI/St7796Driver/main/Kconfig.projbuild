@@ -1,0 +1,63 @@
+menu "ST7796 Driver Configuration"
+
+    config LCD_MOSI_GPIO
+        int "MOSI (SDA) GPIO Pin"
+        default 11
+        help
+            GPIO connected to ST7796 SDA/MOSI pin.
+
+    config LCD_MISO_GPIO
+        int "MISO GPIO Pin"
+        default 13
+        help
+            GPIO connected to ST7796 MISO pin (-1 if not used).
+
+    config LCD_SCLK_GPIO
+        int "SCLK (SCL) GPIO Pin"
+        default 12
+        help
+            GPIO connected to ST7796 SCL/SCK pin.
+
+    config LCD_CS_GPIO
+        int "CS GPIO Pin"
+        default 10
+        help
+            GPIO connected to ST7796 CS pin (-1 if tied to GND).
+
+    config LCD_DC_GPIO
+        int "DC (Data/Command) GPIO Pin"
+        default 9
+        help
+            GPIO connected to ST7796 DC/RS pin.
+
+    config LCD_RST_GPIO
+        int "RST (Reset) GPIO Pin"
+        default 14
+        help
+            GPIO connected to ST7796 RES/RST pin (-1 if tied to 3.3V).
+
+    config LCD_BLK_GPIO
+        int "Backlight (BLK) GPIO Pin"
+        default 2
+        help
+            GPIO connected to ST7796 BLK/LED pin (GPIO 2 on typical board).
+
+    config LCD_H_RES
+        int "Screen Horizontal Resolution (Pixels)"
+        default 480
+        help
+            Width of the ST7796 display (e.g. 480 for Landscape, 320 for Portrait).
+
+    config LCD_V_RES
+        int "Screen Vertical Resolution (Pixels)"
+        default 320
+        help
+            Height of the ST7796 display (e.g. 320 for Landscape, 480 for Portrait).
+
+    config LCD_PIXEL_CLOCK_HZ
+        int "SPI Pixel Clock (Hz)"
+        default 80000000
+        help
+            SPI Clock speed (e.g. 80000000 = 80 MHz, 40000000 = 40 MHz).
+
+endmenu
