@@ -1,0 +1,6 @@
+# Console on the UART port (default). The native USB port disconnects while the chip sleeps.
+CONFIG_ESP_CONSOLE_UART_DEFAULT=y
+
+# Shorter wakeup: skip image validation when waking from deep sleep (NOT from power-on).
+# Trade-off: a flash corruption that happens while sleeping is not detected on wakeup.
+CONFIG_BOOTLOADER_SKIP_VALIDATE_IN_DEEP_SLEEP=y

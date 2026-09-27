@@ -1,0 +1,9 @@
+# Console on the UART port (default). The native USB port disconnects while the chip sleeps.
+CONFIG_ESP_CONSOLE_UART_DEFAULT=y
+
+# Power management: dynamic frequency scaling + automatic light sleep
+CONFIG_PM_ENABLE=y
+# Let the idle task stop the tick and enter light sleep when nothing is scheduled
+CONFIG_FREERTOS_USE_TICKLESS_IDLE=y
+# Track time per PM lock / mode so esp_pm_dump_locks() can print it
+CONFIG_PM_PROFILING=y

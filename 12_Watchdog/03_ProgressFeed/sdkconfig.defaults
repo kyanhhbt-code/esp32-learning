@@ -1,0 +1,7 @@
+# Task Watchdog: ESP-IDF initializes it at startup; the app only reconfigures it
+CONFIG_ESP_TASK_WDT_EN=y
+CONFIG_ESP_TASK_WDT_INIT=y
+
+# Interrupt Watchdog (default values, stated explicitly for the lesson)
+CONFIG_ESP_INT_WDT=y
+CONFIG_ESP_INT_WDT_TIMEOUT_MS=300

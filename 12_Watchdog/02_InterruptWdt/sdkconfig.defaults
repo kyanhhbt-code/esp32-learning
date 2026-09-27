@@ -1,0 +1,7 @@
+# Interrupt Watchdog (default values, stated explicitly for the lesson)
+CONFIG_ESP_INT_WDT=y
+CONFIG_ESP_INT_WDT_TIMEOUT_MS=300
+CONFIG_ESP_INT_WDT_CHECK_CPU1=y
+
+# On panic: print registers + backtrace, then reboot
+CONFIG_ESP_SYSTEM_PANIC_PRINT_REBOOT=y

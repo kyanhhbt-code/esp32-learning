@@ -1,0 +1,2 @@
+# Console on the UART port (default). The native USB port disconnects while the chip sleeps.
+CONFIG_ESP_CONSOLE_UART_DEFAULT=y
